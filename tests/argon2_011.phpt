@@ -1,0 +1,19 @@
+--TEST--
+Tests argon2d_password_hash_need_rehash without parameters
+--FILE--
+<?php
+var_dump(argon2d_password_hash_need_rehash('$argon2d$v=19$m=65536,t=3,p=4$NThzRmFWUlZNNjhYM3FLeQ$qrvsv71DIzPwIy/ZWUM7B6M1As6/bAMQiDiwT9OZ7xg'));
+var_dump(argon2d_password_hash_need_rehash('$argon2d$v=16$m=65536,t=3,p=4$NThzRmFWUlZNNjhYM3FLeQ$qrvsv71DIzPwIy/ZWUM7B6M1As6/bAMQiDiwT9OZ7xg'));
+var_dump(argon2d_password_hash_need_rehash('$argon2d$v=19$m=65535,t=3,p=4$NThzRmFWUlZNNjhYM3FLeQ$qrvsv71DIzPwIy/ZWUM7B6M1As6/bAMQiDiwT9OZ7xg'));
+var_dump(argon2d_password_hash_need_rehash('$argon2d$v=19$m=65536,t=2,p=4$NThzRmFWUlZNNjhYM3FLeQ$qrvsv71DIzPwIy/ZWUM7B6M1As6/bAMQiDiwT9OZ7xg'));
+var_dump(argon2d_password_hash_need_rehash('$argon2d$v=19$m=65536,t=3,p=3$NThzRmFWUlZNNjhYM3FLeQ$qrvsv71DIzPwIy/ZWUM7B6M1As6/bAMQiDiwT9OZ7xg'));
+var_dump(argon2d_password_hash_need_rehash('$argon2d$v=19$m=65536,t=3,p=4$ANSHBNSHGJHZGS$TInD6TQaVV+h/oM3irFdXxOC2nzioE4Vy9pMTi9j+5o'));
+var_dump(argon2d_password_hash_need_rehash('$argon2d$v=19$m=65536,t=3,p=4$RUlESUVJRElFSURJ$JJJJSHSHSHHTInD6TQaV'));
+--EXPECT--
+bool(false)
+bool(true)
+bool(true)
+bool(true)
+bool(true)
+bool(true)
+bool(true)
