@@ -8,7 +8,7 @@ Additionally, the extension provides a low-level Argon2d function apart from the
 The Argon2 reference implementation's libargon2 is utilized for calculating the Argon2d hash.
 
 This extension was developed as part of a bachelor thesis and was partly inspired by the existing [PHP Argon2 Extension](https://github.com/charlesportwoodii/php-argon2-ext).
-You can find more about it in the corresponding [blog article](https://identeco.de/en/blog/schutz_vor_identitätsdiebstählen_durch_die_erweiterung_von_php_um_die_speicherintensive_hashfunktion_argon2d/).
+You can find more about it in the corresponding [blog article](https://identeco.de/blog/protection-against-identity-theft-through-the-extension-of-php-with-argon2d/).
 
 ## Limitations
 
